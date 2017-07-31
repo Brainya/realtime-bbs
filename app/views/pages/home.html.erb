@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div ng-controller="PostsCtrl">
+  <div class="post" ng-repeat="post in posts">
+    <span>{{$index}}.</span>
+    <span class="author">{{post.author}}</span>
+    <span class="time">{{post.created_at | date: 'yyyy-MM-dd HH:mm:ss'}}</span>
+    <div class="body">{{post.body}}</div>
+  </div>
+</div>
